@@ -3,13 +3,17 @@ import { styles } from "@/styles";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { Link } from "expo-router";
+import { router, useRouter } from 'expo-router';
+
 
 export default function Index() {
   return (
     <SafeAreaProvider>
       <SafeAreaView style={styles.container}>
         <View style={styles.navGroup}>
-          <Ionicons name="arrow-back" size={25} />
+        <Link href="/">
+            <Ionicons name="arrow-back" size={25} />
+          </Link>
           <Image source={require('@/assets/images/Logo.png')} />
         </View>
         <Text style={styles.largeText}>Sign in to your</Text>
